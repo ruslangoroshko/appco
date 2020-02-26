@@ -1,0 +1,90 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 20px 0;
+
+    &__item {
+        margin: 0 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__link {
+            text-decoration: none;
+            width: 48px;
+            height: 48px;
+            padding: 5px;
+            border-radius: 8px;
+            border: 2px solid #F1F1F1;
+            line-height: 1;
+            text-align: center;
+            font-size: 16px;
+            color: #1A1A1A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all .5s ease;
+            &:not(.active) {
+                &:hover {
+                    border-color: #3A80BA;
+                    color: #3A80BA;
+                }
+            }
+            &.active {
+                border-color: #fff;
+                background-color: #3A80BA;
+                color: #fff;
+            }
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &__btn {
+            text-decoration: none;
+            width: 48px;
+            height: 48px;
+            padding: 5px;
+            border-radius: 8px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            transform-origin: center;
+            background-image: url('./images/arrow.svg');
+            cursor: pointer;
+            transition: all .4s ease;
+            
+            &:not(.dissabled) {
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            &.dissabled {
+                background-image: url('./images/arrow_dissabled.svg');
+            }
+
+            &.next {
+                transform: rotate(180deg)
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .pagination {
+        &__item {
+            margin: 0 2px;
+            &__link {
+                font-size: 13px;
+                width: 35px;
+                height: 35px;
+            }
+            &__btn {
+                width: 35px;
+            }
+        }
+    }
+}

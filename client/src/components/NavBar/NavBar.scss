@@ -1,0 +1,55 @@
+.main-navbar-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    &__not-home, &--scroll {
+        background-color: #3A80BA;
+    }
+
+    &__inner {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        min-height: 72px;
+    }
+}
+
+
+.logo-link {
+    display: inline-block;
+    color: #fff;
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all .4s ease;
+
+    &--footer {
+        font-size: 32px;
+    }
+
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+        opacity: 0.8;   
+    }
+
+    &:active {
+        transform: scale(.9);
+    }
+}
+
+@media (max-width: 992px) {
+
+    .main-navbar-line {
+        background-color: #3A80BA;
+        &__inner {
+            min-height: 50px;
+        }
+    }
+    .logo-link {
+        font-size: 22px;
+    }
+}
+// navbar
