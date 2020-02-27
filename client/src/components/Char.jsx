@@ -9,8 +9,14 @@ export const Char = ({data, show}) => {
     useEffect(() => {
         const {labels, clicks, views} = parseData(data)
 
-        initChart(labels, clicks)
-        initChart(labels, views)
+        if (show === 'clicks') {
+            initChart(labels, clicks)
+        }
+        if (show === 'views') {
+            initChart(labels, views)
+        }
+        
+        
     }, [data])
 
 
