@@ -33,7 +33,7 @@ export const Char = ({data, show}) => {
 
     const initChart = (labels, data) => {
         const myChartRef = chartRef.current.getContext("2d")
-        chartRef.current.height = 460
+    
         new Chart(myChartRef, {
             type: "line",
             data: {
