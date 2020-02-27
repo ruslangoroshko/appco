@@ -6,7 +6,7 @@ const Users = new useUsers();
 
 
 router.get('/users', async (req, res) => {
-    const users = llUsers()
+    const users = await Users.getAllUsers()
     try {
         if(!users) {
             return res.status(400).json({message: 'Users list dosn`t exist'})
